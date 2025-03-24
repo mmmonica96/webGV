@@ -19,7 +19,7 @@
 
         //array de personas
         $arrayPersonas = [
-
+            /*objetos personas*/
 
         ];
 
