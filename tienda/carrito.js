@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //y la ruta de la imagen
   botonesComprar.forEach((boton) => {
     boton.addEventListener("click", function () {
-      // Encuentra el producto correspondiente
+      //encuentra el producto correspondiente
       const producto = boton.parentElement;
       const nombre = producto.querySelector(".nombre").textContent;
       const precio = producto.querySelector(".precio").textContent;

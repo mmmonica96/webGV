@@ -8,7 +8,7 @@ body {
   padding: 0;
   text-align: center;
   /*imagen del banner */
-  background-image: url("../imagenes/logoBannerpng.png");
+  background-image: url("../imagenes/logoBanner.png");
   /* ajuste del tamaño de la imagen*/
   background-size: 77%;
   /* coloca la imagen en la parte superior y centrada */
