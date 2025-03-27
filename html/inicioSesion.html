@@ -9,8 +9,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/videojuego.css" />
-    <header>GamerVerse</header>
+    <script src="../registro/login.js" defer></script>
   </head>
+
   <body>
     <!-- menú -->
     <nav>
@@ -23,11 +24,16 @@
     </nav>
 
     <div class="container mt-4">
-      <form class="row g-3">
+      <form id="loginForm">
         <!-- email -->
         <div class="col-12">
           <label for="loginEmail" class="form-label d-block">Email</label>
-          <input type="email" class="form-control" id="loginEmail" />
+          <input
+            type="email"
+            class="form-control"
+            id="loginEmail"
+            name="loginEmail"
+          />
         </div>
 
         <!-- contraseña -->
@@ -35,23 +41,20 @@
           <label for="loginPassword" class="form-label d-block"
             >Contraseña</label
           >
-          <input type="password" class="form-control" id="loginPassword" />
+          <input
+            type="password"
+            class="form-control"
+            id="loginPassword"
+            name="loginPassword"
+          />
         </div>
 
         <!-- botones -->
         <div class="col-12 mt-3">
-          <button
-            type="button"
-            class="btn btn-success"
-            onclick="iniciarSesion()"
-          >
-            Iniciar sesión
-          </button>
-          <a href="/css/videojuego.css" class="btn btn-secondary">Cancelar</a>
+          <button type="submit" class="btn btn-success">Iniciar sesión</button>
+          <!--<a href="/css/videojuego.css" class="btn btn-secondary">Cancelar</a>-->
         </div>
       </form>
     </div>
-
-    <script src="/css/videojuego.css"></script>
   </body>
 </html>

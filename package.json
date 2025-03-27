@@ -1,0 +1,30 @@
+{
+  "name": "lulustudios",
+  "version": "1.0.0",
+  "main": "registro/server.js",
+  "scripts": {
+    "start": "node registro/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmmonica96/webGV.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mmmonica96/webGV/issues"
+  },
+  "homepage": "https://github.com/mmmonica96/webGV#readme",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.13.0"
+  }
+}
