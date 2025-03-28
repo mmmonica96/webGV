@@ -187,3 +187,23 @@ footer p {
 .producto p {
   margin: 5px 0;
 }
+/*estilo para pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+  .card {
+    width: 100%; /* Las tarjetas ocupan todo el ancho en pantallas pequeñas */
+  }
+}
+
+/*estilo para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+  .card {
+    width: 48%; /* Dos tarjetas por fila en pantallas medianas */
+  }
+}
+
+/*estilo para pantallas grandes */
+@media (min-width: 1200px) {
+  .card {
+    width: calc(33.33% - 20px);
+  }
+}

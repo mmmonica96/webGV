@@ -9,8 +9,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- bootstrap -->
     <link rel="stylesheet" href="../css/videojuego.css" />
     <link rel="stylesheet" href="../css/noticias.css" />
+    <!-- carrito -->
     <script src="../tienda/carrito.js" defer></script>
   </head>
   <body>
@@ -20,12 +22,15 @@
       <a href="tienda.html">Tienda</a>
       <a href="noticias.html">Noticias</a>
       <a href="contactanos.html">Contacto</a>
-      <a href="registro.php">Registro</a>
-      <a href="inicioSesion.php">Inicio de sesión</a>
+      <span id="authLinks">
+        <!-- permitimos que el usuario pueda registrarse
+         o iniciar sesion -->
+        <a href="registro.html">Registro</a>
+        <a href="inicioSesion.html">Inicio de sesión</a>
+      </span>
     </nav>
     <h1>Tienda</h1>
     <!-- productos de la tienda -->
-
     <div class="productos">
       <div class="producto">
         <img src="../imagenes/mario3s.png" alt="Super Mario Maker" />

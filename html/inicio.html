@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,44 +10,108 @@
 
   <body>
     <header>
-      <h1>GameVerse</h1>
-
-      <a href="/controller/logout.php">Cerrar sesión</a>
+      <div class="user-info" id="userInfo"></div>
     </header>
+
     <!-- menú -->
     <nav>
       <a href="inicio.html">Inicio</a>
       <a href="tienda.html">Tienda</a>
       <a href="noticias.html">Noticias</a>
       <a href="contactanos.html">Contacto</a>
-      <a href="registro.html">Registro</a>
-      <a href="inicioSesion.html">Inicio de sesión</a>
+      <span id="authLinks">
+        <!-- permitimos que el usuario pueda registrarse
+         o iniciar sesion -->
+        <a href="registro.html">Registro</a>
+        <a href="inicioSesion.html">Inicio de sesión</a>
+      </span>
     </nav>
-    <!-- tarjetas con tres imagenes -->
+
     <h3>¡Compra por género!</h3>
     <div class="content">
-      <div class="tarjetas">
-        <img src="../imagenes/uncharted.jpg" alt="accion" />
-        <a href="tienda.html"><button type="button">Acción</button></a>
-      </div>
-      <div class="tarjetas">
-        <img src="../imagenes/aventura.jpg" alt="aventura" />
-        <a href="tienda.html"><button type="button">Aventura</button></a>
-      </div>
-      <div class="tarjetas">
-        <img src="../imagenes/civi.jpg" alt="estrategia" />
-        <a href="tienda.html"><button type="button">Estrategia</button></a>
-      </div>
-      <div class="tarjetas">
-        <img src="../imagenes/portadaSilent.jpg" alt="terror" />
-        <a href="tienda.html"><button type="button">Terror</button></a>
-      </div>
-      <div class="tarjetas">
-        <img src="../imagenes/eaPortada.png" alt="deportes" />
-        <a href="tienda.html"><button type="button">Deportes</button></a>
+      <div class="content">
+        <!-- tarjetas -->
+        <div class="tarjetas">
+          <img src="../imagenes/uncharted.jpg" alt="accion" />
+          <a href="tienda.html"><button type="button">Acción</button></a>
+        </div>
+        <div class="tarjetas">
+          <img src="../imagenes/aventura.jpg" alt="aventura" />
+          <a href="tienda.html"><button type="button">Aventura</button></a>
+        </div>
+        <div class="tarjetas">
+          <img src="../imagenes/civi.jpg" alt="estrategia" />
+          <a href="tienda.html"><button type="button">Estrategia</button></a>
+        </div>
+        <div class="tarjetas">
+          <img src="../imagenes/portadaSilent.jpg" alt="terror" />
+          <a href="tienda.html"><button type="button">Terror</button></a>
+        </div>
+        <div class="tarjetas">
+          <img src="../imagenes/eaPortada.png" alt="deportes" />
+          <a href="tienda.html"><button type="button">Deportes</button></a>
+        </div>
       </div>
     </div>
-    <!-- footer con derechos reservados -->
+
     <footer>&copy; 2025 GameVerse - Todos los derechos reservados</footer>
+
+    <script>
+      //verificamos la sesión cuando se carga la página
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          //hacemos solicitus al servidor
+          const response = await fetch("http://localhost:5000/datos-usuario", {
+            //evitamos las cookies se incluyan en la solicitud
+            credentials: "include",
+          });
+          //verificamos si la respuesta es correcta
+          //si la respuesta es correcta, significa que hay una sesión activa
+          if (response.ok) {
+            //obtenemos los datos del usuario
+            //convertimos la respuesta a formato JSON
+            const user = await response.json();
+
+            //mostramos información del usuario
+            document.getElementById("userInfo").innerHTML = `
+            Bienvenido, ${user.username} 
+            <button class="logout-btn" onclick="logout()">Cerrar sesión</button>
+          `;
+
+            //cosultamos enlaces de registro/login
+            document.getElementById("authLinks").style.display = "none";
+          } else {
+            //no hay sesión activa
+            showAuthLinks();
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          showAuthLinks();
+        }
+      });
+      //mostramos los enlaces de autenticación si no hay sesión activa
+      function showAuthLinks() {
+        document.getElementById("userInfo").style.display = "none";
+        document.getElementById("authLinks").style.display = "inline";
+      }
+      //funcion para cerrar sesión
+      async function logout() {
+        try {
+          //hacemos una solicitud al servidor para cerrar sesión
+          const response = await fetch("http://localhost:5000/logout", {
+            method: "POST",
+            credentials: "include",
+          });
+
+          if (response.ok) {
+            //recargamos la página
+            window.location.href = "inicio.html";
+          }
+          //manejamos el error si la respuesta no es correcta
+        } catch (error) {
+          console.error("Error al cerrar sesión:", error);
+        }
+      }
+    </script>
   </body>
 </html>

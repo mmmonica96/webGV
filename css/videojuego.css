@@ -126,3 +126,16 @@ footer {
   margin-top: 20px;
   color: #bbb;
 }
+.user-info {
+  float: right;
+  margin: 10px;
+  color: white;
+}
+.logout-btn {
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 10px;
+}

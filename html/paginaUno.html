@@ -23,14 +23,18 @@
       <a href="tienda.html">Tienda</a>
       <a href="noticias.html">Noticias</a>
       <a href="contactanos.html">Contacto</a>
-      <a href="registro.html">Registro</a>
-      <a href="inicioSesion.html">Inicio de sesión</a>
+      <span id="authLinks">
+        <!-- permitimos que el usuario pueda registrarse
+           o iniciar sesion -->
+        <a href="registro.html">Registro</a>
+        <a href="inicioSesion.html">Inicio de sesión</a>
+      </span>
     </nav>
 
     <div class="container">
       <div class="row">
         <div class="card-container d-flex flex-wrap justify-content-center">
-          <!--primera tarjeta -->
+          <!-- Primera tarjeta -->
           <div class="card m-2" style="width: 18rem">
             <img
               class="card-img-top"
@@ -46,7 +50,7 @@
             </div>
           </div>
 
-          <!--segunda tarjeta -->
+          <!-- Segunda tarjeta -->
           <div class="card m-2" style="width: 18rem">
             <img
               class="card-img-top"
@@ -60,7 +64,7 @@
             </div>
           </div>
 
-          <!--tercera tarjeta -->
+          <!-- Tercera tarjeta -->
           <div class="card m-2" style="width: 18rem">
             <img
               class="card-img-top"
@@ -75,11 +79,13 @@
                 Assassin’s Creed Shadows hace historia para la franquicia y
                 rompe un récord en Steam.
               </p>
-              <a href="./noticiaUno.html" class="btn btn-secondary">Ver más</a>
+              <a href="noticias/noticiaTres.html" class="btn btn-secondary"
+                >Ver más</a
+              >
             </div>
           </div>
 
-          <!--cuarta tarjeta -->
+          <!-- Cuarta tarjeta -->
           <div class="card m-2" style="width: 18rem">
             <img class="card-img-top" src="../imagenes/steam.png" alt="Steam" />
             <div class="card-body">
@@ -88,11 +94,13 @@
                 Jugadores alertan sobre un shooter con malware en Steam. Valve
                 ya lo retiró.
               </p>
-              <a href="./noticiaUno.html" class="btn btn-secondary">Ver más</a>
+              <a href="noticias/noticiaCuatro.html" class="btn btn-secondary"
+                >Ver más</a
+              >
             </div>
           </div>
 
-          <!--quinta tarjeta -->
+          <!-- Quinta tarjeta -->
           <div class="card m-2" style="width: 18rem">
             <img
               class="card-img-top"
@@ -105,11 +113,13 @@
                 Trucos y soluciones para la palabra del día en Wordle en
                 español.
               </p>
-              <a href="./noticiaUno.html" class="btn btn-secondary">Ver más</a>
+              <a href="noticias/noticiaCinco.html" class="btn btn-secondary"
+                >Ver más</a
+              >
             </div>
           </div>
 
-          <!--sexta tarjeta -->
+          <!-- Sexta tarjeta -->
           <div class="card m-2" style="width: 18rem">
             <img class="card-img-top" src="../imagenes/gta.png" alt="GTA VI" />
             <div class="card-body">
@@ -118,10 +128,12 @@
                 Retraso de GTA VI sería catastrófico para algunos estudios,
                 según analistas.
               </p>
-              <a href="./noticiaUno.html" class="btn btn-secondary">Ver más</a>
+              <a href="noticias/noticiaSeis.html" class="btn btn-secondary"
+                >Ver más</a
+              >
             </div>
           </div>
-          <!--septima tarjeta -->
+          <!-- septima tarjeta -->
           <div class="card m-2" style="width: 18rem">
             <img class="card-img-top" src="../imagenes/gta.png" alt="GTA VI" />
             <div class="card-body">
@@ -130,10 +142,12 @@
                 Retraso de GTA VI sería catastrófico para algunos estudios,
                 según analistas.
               </p>
-              <a href="./noticiaUno.html" class="btn btn-secondary">Ver más</a>
+              <a href="noticias/noticiaSeis.html" class="btn btn-secondary"
+                >Ver más</a
+              >
             </div>
           </div>
-          <!-- octava tarjeta -->
+          <!-- septima tarjeta -->
           <div class="card m-2" style="width: 18rem">
             <img class="card-img-top" src="../imagenes/gta.png" alt="GTA VI" />
             <div class="card-body">
@@ -142,7 +156,9 @@
                 Retraso de GTA VI sería catastrófico para algunos estudios,
                 según analistas.
               </p>
-              <a href="./noticiaUno.html" class="btn btn-secondary">Ver más</a>
+              <a href="noticias/noticiaSeis.html" class="btn btn-secondary"
+                >Ver más</a
+              >
             </div>
           </div>
         </div>
@@ -153,25 +169,15 @@
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center mt-4">
         <li class="page-item disabled">
-          <a
-            class="page-link"
-            href="paginaUno.html"
-            tabindex="-1"
-            aria-disabled="true"
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
             >Anterior</a
           >
         </li>
-        <li class="page-item active">
-          <a class="page-link" href="paginaUno.html">1</a>
-        </li>
+        <li class="page-item active"><a class="page-link" href="">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
         <li class="page-item">
-          <a class="page-link" href="paginaDos.html">2</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="paginaTres.html">3</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="paginaDos.html">Siguiente</a>
+          <a class="page-link" href="#">Siguiente</a>
         </li>
       </ul>
     </nav>
