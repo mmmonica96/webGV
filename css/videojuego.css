@@ -1,40 +1,26 @@
 /* estilo para el body */
 body {
   background-color: #121212;
-  /*color del texto */
   color: #b4b1b1;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
-  /*imagen del banner */
-  background-image: url("../imagenes/logoBanner.png");
-  /* ajuste del tamaño de la imagen*/
-  background-size: 77%;
-  /* coloca la imagen en la parte superior y centrada */
-  background-position: top center;
-  /*fondo no se mueva al hacer scroll */
-  background-attachment: fixed;
-  /* evita que la imagen del fondo se repita */
-  background-repeat: no-repeat;
 }
 
 /*estilo del encabezado */
 header {
-  /*altura */
   height: 200px;
   display: flex;
-  /*centra texto dentro del header */
   align-items: center;
-  /* centra horizontalmente el texto */
   justify-content: center;
-  /*color del texto del encabezado */
   color: rgb(26, 20, 20);
-  /* tamaño de la fuente */
   font-size: 30px;
-  /* estilo de la fuente */
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url("../imagenes/logoBanner.png");
+  background-size: cover; /* Ajusta la imagen al tamaño del header */
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* estilo del menú*/
