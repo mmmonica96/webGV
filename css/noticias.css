@@ -190,14 +190,14 @@ footer p {
 /*estilo para pantallas pequeñas (móviles) */
 @media (max-width: 576px) {
   .card {
-    width: 100%; /* Las tarjetas ocupan todo el ancho en pantallas pequeñas */
+    width: 100%;
   }
 }
 
 /*estilo para pantallas medianas (tabletas) */
 @media (max-width: 768px) {
   .card {
-    width: 48%; /* Dos tarjetas por fila en pantallas medianas */
+    width: 48%;
   }
 }
 
